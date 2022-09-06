@@ -10,7 +10,7 @@ using std::vector;
 
 class Orchestra{
     protected:
-        vector<Musician> members
+        Musician *musicians;
         int number_of_members;
         int Osize;
     public:
@@ -21,4 +21,5 @@ class Orchestra{
         Musician *get_members();
         bool add_musician(Musician new_musician);
         ~Orchestra();
-}
+};
+#endif
