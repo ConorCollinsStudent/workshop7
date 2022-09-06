@@ -3,9 +3,9 @@
 
 using namespace std;
 
-Musician::Musician{
-    instrument = "null";
-    experience = 0;
+Musician::Musician(){
+    string instrument = "null";
+    int experience = 0;
 };
 
 Musician::Musician(string instrument, int experience){
@@ -22,6 +22,6 @@ int Musician::get_experience(){
 };
 
 Musician::~Musician(){
-    
+
 };
 
