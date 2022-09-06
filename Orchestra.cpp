@@ -9,11 +9,13 @@ using std::vector;
 
 Orchestra::Orchestra(){
     number_of_members = 0;
-    Osize = 5;
+    Osize = 3;
 }
 
 Orchestra::Orchestra(int size){
+    number_of_members=0;
     Osize = size;
+    musicians = new Musician[size];
 }
 
 int Orchestra::get_current_number_of_members(){
@@ -22,7 +24,7 @@ int Orchestra::get_current_number_of_members(){
 
 bool Orchestra::has_instrument(string instrument){
      for(int i=0; i<number_of_members; i++){
-        if(*(musicians+i)->get_instrument()==instrument){
+        if(musicians[i].get_instrument()==instrument){
             return true;
         }
     }
@@ -35,7 +37,7 @@ Musician *Orchestra::get_members(){
 
 bool Orchestra::add_musician(Musician new_musician){
     if(number_of_members<Osize){
-        *(musicians+number_of_members) = new_musician;
+        musicians[number_of_members] = new_musician;
         number_of_members++;
         return true;
     }else{
