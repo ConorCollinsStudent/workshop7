@@ -1,11 +1,16 @@
 #ifndef ORCHESTRA_H
 #define ORCHESTRA_H
+#include "Musician"
 
 #include <iostream>
 using namespace std;
 
+#include <vector>
+using std::vector;
+
 class Orchestra{
     protected:
+        vector<Musician> members
         int number_of_members;
         int Osize;
     public:
